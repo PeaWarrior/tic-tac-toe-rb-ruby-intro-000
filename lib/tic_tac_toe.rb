@@ -112,6 +112,5 @@ end
 def winner(board)
   if won?(board)[0] == true
     return won?(board)[1]
-  else return nil
   end
 end
