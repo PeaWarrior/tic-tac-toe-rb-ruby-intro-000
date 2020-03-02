@@ -62,10 +62,9 @@ def turn_count(board)
 end
 
 def current_player(board)
-  if turn_count(board) % 2 != 0
+  if turn_count(board) % 2 == 0
     return "X"
-  else
-    return "O"
+  else return "O"
   end
 end
 
@@ -109,9 +108,9 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) == true && current_player(board) == "X"
+  if won?(board) == true && current_player(board) == "O"
     return "X"
-  elsif won?(board) == true && current_player(board) == "O"
+  elsif won?(board) == true && current_player(board) == "X"
     return "O"
   else return nil
   end
