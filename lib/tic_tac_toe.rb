@@ -105,14 +105,13 @@ end
 def over?(board)
   if draw?(board) == true || won?(board)[1] == true
     return true
-  else
-    return false
   end
+  return false
 end
 
 def winner(board)
   if won?(board)[1] == true
     return won?(board)[0]
-  else return nil
   end
+  return nil
 end
