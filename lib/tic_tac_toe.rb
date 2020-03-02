@@ -110,10 +110,10 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) == true && winner = "X"
-    return "X"
-  elsif won?(board) == true && winner = "O"
+  if won?(board) == true && turn_count(board) == "X"
     return "O"
+  elsif won?(board) == true && turn_count(board) == "O"
+    return "X"
   end
   return nil
 end
