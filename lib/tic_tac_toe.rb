@@ -79,11 +79,11 @@ def won?(board)
     slot_index_3 = board[win_combo_3]
 
     if slot_index_1 == "X" && slot_index_2 == "X" && slot_index_3 == "X"
-      winner = "X"
-      return true
+      win = [true, "X"]
+      return win
     elsif slot_index_1 == "O" && slot_index_2 == "O" && slot_index_3 == "O"
-      winner = "O"
-      return true
+      win = [true, "O"]
+      return win
     end
   end
   return false
@@ -103,16 +103,16 @@ def draw?(board)
 end
 
 def over?(board)
-  if draw?(board) == true || won?(board) == true
+  if draw?(board) == true || won?(board)[0] == true
     return true
   else return false
   end
 end
 
 def winner(board)
-  if won?(board) == true && current_player(board) == "X"
+  if won?(board)[0] == true && won?(board)[1] == "X"
     return "X"
-  elsif won?(board) == true && current_player(board) == "O"
+  elsif won?(board)[0] == true && won?(board)[1] == "O"
     return "O"
   end
   return nil
