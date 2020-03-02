@@ -103,7 +103,7 @@ def draw?(board)
 end
 
 def over?(board)
-  if draw?(board) == true || (won?(board)[0]) == true
+  if draw?(board) == true || won?(board) == true
     return true
   else
     return false
@@ -111,7 +111,7 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board)[0] == true
-    return won?(board)[1]
+  if won?(board) == true
+    return won?(board)
   end
 end
