@@ -79,10 +79,10 @@ def won?(board)
     slot_index_3 = board[win_combo_3]
 
     if slot_index_1 == "X" && slot_index_2 == "X" && slot_index_3 == "X"
-      win = [true, "X"]
+      win = "X"
       return win
     elsif slot_index_1 == "O" && slot_index_2 == "O" && slot_index_3 == "O"
-      win = [true, "O"]
+      win = "O"
       return win
     end
   end
