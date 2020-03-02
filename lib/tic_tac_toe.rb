@@ -115,3 +115,9 @@ def winner(board)
   else return nil
   end
 end
+
+def play(board)
+  turn(board)
+  over?(board)
+end
+  
