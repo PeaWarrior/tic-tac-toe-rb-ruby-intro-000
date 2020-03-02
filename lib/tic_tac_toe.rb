@@ -111,9 +111,9 @@ end
 
 def winner(board)
   if won?(board) == true && turn_count(board) == "X"
-    return "O"
-  elsif won?(board) == true && turn_count(board) == "O"
     return "X"
+  elsif won?(board) == true && turn_count(board) == "O"
+    return "O"
   end
   return nil
 end
