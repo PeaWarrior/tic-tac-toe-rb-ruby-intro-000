@@ -40,6 +40,7 @@ def valid_move?(board, index)
 end
 
 def turn (board)
+  puts "Current player is " + current_player(board) +"."
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
@@ -118,6 +119,7 @@ end
 
 def play(board)
   until over? == true
+  player = current_player(board)
   turn(board)
   over?(board)
 end
