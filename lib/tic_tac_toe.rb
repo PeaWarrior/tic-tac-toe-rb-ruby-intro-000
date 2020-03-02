@@ -112,6 +112,6 @@ def winner(board)
     return "X"
   elsif won?(board) == true && current_player(board) == "X"
     return "O"
-  else return nil
   end
+  return nil
 end
