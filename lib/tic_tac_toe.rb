@@ -117,7 +117,7 @@ def winner(board)
 end
 
 def play(board)
-  until over? == true
+  until over? == true do
   turn(board)
   over?(board)
 end
