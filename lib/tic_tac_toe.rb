@@ -103,7 +103,7 @@ def draw?(board)
 end
 
 def over?(board)
-  if draw?(board) == true || won?(board)[0] == true
+  if draw?(board) == true || (won?(board)[0]) == true
     return true
   else
     return false
