@@ -118,10 +118,9 @@ def winner(board)
 end
 
 def play(board)
-  counter = 0
-  until counter == 9
-  player = current_player(board)
-  turn(board)
-  over?(board)
-  counter += 1
+  i = 0
+  while i < 9 do
+    i += 1
+    turn(board)
+  end
 end
